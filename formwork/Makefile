@@ -1,11 +1,11 @@
 CC := g++
 CUR_DIR := $(shell pwd)
 FLAGS := -std=c++11 -w
-INC_DIR := $(CUR_DIR)/inlcude
-SRC_DIR := $(CUR_DIR)/src
+INC_DIR := $(CUR_DIR)/be/include
+SRC_DIR := $(CUR_DIR)/be/src
 BUILD_DIR := $(CUR_DIR)/build
-BIN_DIR := $(CUR_DIR)/bin
-INCLUDE := -I./$(INC_DIR)
+BIN_DIR := $(CUR_DIR)/build/bin
+INCLUDE := -I$(INC_DIR)
 src = $(wildcard $(SRC_DIR)/*.cpp)
 obj = $(patsubst &(SRC_DIR)/%.cpp,$(BUILD_DIR)/%.o,$(src))
 
