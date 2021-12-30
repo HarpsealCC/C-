@@ -11,7 +11,7 @@ obj = $(patsubst &(SRC_DIR)/%.cpp,$(BUILD_DIR)/%.o,$(src))
 
 $(BIN_DIR)/main: $(obj)
 	@mkdir -p $(BIN_DIR)
-	$(CC) $(FLAGS) $(INCLUDE) $(obj) -lpthread -pg -o $@
+	$(CC) $(FLAGS) $(INCLUDE) $(obj) -lpthread -g -o $@
 	@echo 'Build done!'
 
 $(BUILD_DIR)/%.o: $(SRC_DIR)/%.cpp
